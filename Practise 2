@@ -7,3 +7,14 @@ FOREIGN KEY
 REFERENCES
 customer
 customer_id;
+
+-- alter table phone_number by adding a foreign key that reference primary keys from relevant tables
+ALTER TABLE phone_number
+ADD CONSTRAINT 
+fk_phone_number_customer_id
+FOREIGN KEY
+(phone_number_customer_id)
+REFERENCES
+customer
+customer_id;
+
