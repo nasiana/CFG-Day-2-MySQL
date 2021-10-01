@@ -1,0 +1,9 @@
+-- alter table email address by adding a foreign key that reference primary keys from relevant tables
+ALTER TABLE email_address
+ADD CONSTRAINT 
+fk_email_address_customer_id
+FOREIGN KEY
+(email_address_customer_id)
+REFERENCES
+customer
+customer_id;
