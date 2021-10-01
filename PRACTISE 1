@@ -1,8 +1,14 @@
 -- returns all unique part names
-SELECT DISTINCT(p.PNAME) FROM part p;
+
+-- when using SELECT DISTINCT and only selecting one variable, put the variable in ()
 SELECT DISTINCT(PNAME) FROM part;
+
+-- alias p was used here 
+SELECT DISTINCT(p.PNAME) FROM part p;
+
 -- return all unique parts and their ID number from table part
-SELECT DISTINCT p.PNAME, p.P_ID, from part p;
+-- for more than one variable for SELECT DISTINCT, don't use () but instead seperate variables by a ,
+SELECT DISTINCT p.PNAME, p.P_ID from part p;
 
 -- returns all projects run in 'London' from table 'projects'
 SELECT pj.J_ID FROM PROJECT pj WHERE pj.CITY = 'London';
