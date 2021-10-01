@@ -2,19 +2,18 @@
 ALTER TABLE email_address
 ADD CONSTRAINT 
 fk_email_address_customer_id
-FOREIGN KEY
-(email_address_customer_id)
+FOREIGN KEY (email_address_customer_id)
 REFERENCES
-customer
-customer_id;
+-- add () around the concerning column
+customer (customer_id);
 
 -- alter table phone_number by adding a foreign key that reference primary keys from relevant tables
 ALTER TABLE phone_number
 ADD CONSTRAINT 
 fk_phone_number_customer_id
-FOREIGN KEY
-(phone_number_customer_id)
+FOREIGN KEY (phone_number_customer_id)
 REFERENCES
-customer
-customer_id;
+customer (customer_id);
 
+ALTER TABLE email_address
+DROP CONSTRAINT fk_email_address_customer_id;
