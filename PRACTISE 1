@@ -1,6 +1,6 @@
 -- returns all unique part names
-SELECT DISTINCT p.PNAME, FROM part p;
-SELECT DISTINCT PNAME, FROM part;
+SELECT DISTINCT(p.PNAME) FROM part p;
+SELECT DISTINCT(PNAME) FROM part;
 -- return all unique parts and their ID number from table part
 SELECT DISTINCT p.PNAME, p.P_ID, from part p;
 
